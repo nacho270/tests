@@ -1,0 +1,15 @@
+Pasos:
+
+1- Escribir la clase java con el metodo nativo que se quiere crear:
+	public native String testJNI();
+
+2- correr javah -jni archivo.class donde esta definido el metodo
+   Esto crear un header de C con JNI
+
+3- con dev-cpp crear un proyecto dll en C, reemplazar el contenido del .h con el que se obtuvo antes
+
+4- Implementar el metodo en un .C
+
+5- Al compilar, incluir los directorios include e include/win32 de la JDK. Esto devuelve una .dll
+
+6- Definir una carpeta de donde tomar las dll (en el java build path, en la parte de source, ponerlo en Native library location)
