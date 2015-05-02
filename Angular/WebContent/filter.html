@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="appFiltro">
+	<head>
+		<meta charset="UTF-8">
+		<title>Curso Angular</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
+		<script type="text/javascript" src="js/filter.js"></script>
+	</head>
+	<body ng-controller="FiltroController">
+		Sin filtro: {{miHtml}}<br/>
+		Con filtro: {{miHtml | removeHtml}}<br/>
+		Objeto a JSON automatico: {{objetoParaJson | json}}<br/>
+		Numero como moneda: {{precio | currency <!-- con paramtro seria: currency:'param'  -->}}
+		<br/>
+		Digest/apply: {{nombre}}<br/>
+		<button id="boton">click</button>
+	</body>
+</html>
