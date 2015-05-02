@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+		<style type="text/css">
+			.hover{
+				background-color: red;
+			}
+			.no-hover{
+				background-color: green;
+			}
+		</style>
+		<meta charset="UTF-8">
+		<title>Curso Angular</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
+	</head>
+	<body>
+		<button ng-mouseover="flag=true" ng-mouseout="flag=false" ng-click="flag=!flag" ng-class="{'hover':flag,'no-hover':!flag}">
+			Hover me
+		</button>
+		<span ng-show="flag">
+			Click!
+		</span>
+		<p>		
+			{{flag}}
+		</p>
+	</body>
+</html>
